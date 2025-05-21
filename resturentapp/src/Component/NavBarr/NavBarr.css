@@ -1,0 +1,43 @@
+.custom-navbar {
+  position: fixed;      
+  top: 0;               
+  left: 0;
+  width: 100%;          
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color:black;
+  color: white;  
+  z-index: 9999;        
+}
+
+.brand-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  
+}
+
+.nav-links .nav-link {
+ color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color:orangered;
+  text-decoration: underline;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.action-buttons {
+  align-items: center;
+}

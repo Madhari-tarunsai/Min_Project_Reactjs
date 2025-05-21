@@ -1,0 +1,115 @@
+.hero-section {
+  background-image: url("https://images.deliveryhero.io/image/fd-pk/LH/w39v-listing.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* fixed background */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color:black;
+  position: relative;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  color:black;
+}
+
+.hero-button {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #e0a800;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Media Queries */
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-section {
+    background-position: top center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets and small laptops */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .hero-section {
+    background-position: center center;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-button {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
+}
+
+/* Large laptops and desktops */
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .hero-section {
+    background-position: center center;
+  }
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Large screens / TVs */
+@media (min-width: 1601px) {
+  .hero-section {
+    background-position: center center;
+    background-size: contain; /* to fit better on very large screens */
+  }
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+  .hero-button {
+    padding: 14px 28px;
+    font-size: 1.2rem;
+  }
+}
