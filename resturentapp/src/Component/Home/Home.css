@@ -1,12 +1,12 @@
 .hero-section {
-  background-image: url("https://images.deliveryhero.io/image/fd-pk/LH/w39v-listing.jpg"); 
+  background-image: url("https://w0.peakpx.com/wallpaper/514/512/HD-wallpaper-indian-restaurant-san-francisco-deccan-house-sf-north-indian-food.jpg"); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* fixed background */
   height: 100vh;
   display: flex;
   align-items: center;
-  color:black;
+  color:white;
   position: relative;
   padding-left: 10%;
   padding-right: 10%;
@@ -25,7 +25,7 @@
 .hero-content p {
   margin: 20px 0;
   font-size: 1.1rem;
-  color:black;
+  color:white;
 }
 
 .hero-button {

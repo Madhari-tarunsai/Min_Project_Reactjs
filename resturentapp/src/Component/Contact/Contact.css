@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px;
+  animation: fadeIn 1.5s ease-in-out;
+  flex-wrap: wrap;
+}
+
+.form-section,
+.hours-section {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  width: 45%;
+  animation: slideUp 1s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-section button {
+  padding: 10px 20px;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.form-section button:hover {
+  transform: scale(1.1);
+}
+
+h1,
+h2 {
+  margin: 0 0 20px;
+}
+
+.hours-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.hours-section .days {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* 📱 Phones: < 600px */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .form-section,
+  .hours-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1,
+  h2 {
+    font-size: 20px;
+  }
+
+  .hours-section p {
+    font-size: 13px;
+  }
+}
+
+/* 💻 Laptops: 601px to 1199px */
+@media (min-width: 601px) and (max-width: 1199px) {
+  .container {
+    padding: 40px;
+    flex-direction: row;
+  }
+
+  .form-section,
+  .hours-section {
+    width: 48%;
+  }
+
+  h1,
+  h2 {
+    font-size: 24px;
+  }
+
+  .hours-section p {
+    font-size: 14px;
+  }
+}
+
+/* 🖥️ Big Screens (TVs): 1200px and up */
+@media (min-width: 1200px) {
+  .container {
+    padding: 80px;
+  }
+
+  .form-section,
+  .hours-section {
+    width: 40%;
+  }
+
+  h1,
+  h2 {
+    font-size: 32px;
+  }
+
+  .form-section input {
+    font-size: 18px;
+  }
+
+  .hours-section p {
+    font-size: 16px;
+  }
+}

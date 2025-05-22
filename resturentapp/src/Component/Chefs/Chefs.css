@@ -1,0 +1,217 @@
+/* Base styles */
+.chefs-section {
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background:black;
+  margin-top: 4%;
+  min-height: 100vh;
+}
+
+
+.chefs-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color:white;
+}
+
+.chefs-header p {
+  font-size: 1.1rem;
+  color:white;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* Container: flexbox side by side */
+.chefs-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Each chef card base */
+.chef-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  width: 220px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0; /* start hidden, animate in */
+}
+
+.chef-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgb(0 0 0 / 0.2);
+}
+
+.chef-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #f05a28;
+  transition: border-color 0.3s ease;
+}
+
+.chef-card:hover .chef-img {
+  border-color: #ff6f47;
+}
+
+.chef-card h2 {
+  font-size: 1.3rem;
+  margin: 8px 0 4px;
+  color: #222;
+}
+
+.chef-card p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Social icons */
+.chef-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.chef-socials a {
+  color: #f05a28;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.chef-socials a:hover {
+  color: #ff6f47;
+  transform: scale(1.2);
+}
+
+/* Animations for each chef card - stagger and different styles */
+
+/* Fade in + slide up */
+.chef-card:nth-child(1) {
+  animation-name: fadeInUp;
+  animation-delay: 0.2s;
+}
+
+/* Fade in + slide right */
+.chef-card:nth-child(2) {
+  animation-name: fadeInRight;
+  animation-delay: 0.4s;
+}
+
+/* Fade in + slide left */
+.chef-card:nth-child(3) {
+  animation-name: fadeInLeft;
+  animation-delay: 0.6s;
+}
+
+/* Fade in + scale up */
+.chef-card:nth-child(4) {
+  animation-name: fadeInScale;
+  animation-delay: 0.8s;
+}
+
+/* Keyframes */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Media Queries */
+
+/* Phone (max-width: 600px) */
+@media (max-width: 600px) {
+  .chefs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chef-card {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Tablet & small laptops (601px to 899px) */
+@media (min-width: 601px) and (max-width: 899px) {
+  .chefs-container {
+    justify-content: space-around;
+  }
+  .chef-card {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Medium desktops (900px to 1199px) */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .chefs-container {
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .chef-card {
+    width: 220px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+  .chefs-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  .chef-card {
+    width: 220px;
+    margin-bottom: 30px;
+  }
+}

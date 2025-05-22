@@ -1,0 +1,161 @@
+.container {
+  display: flex;
+  min-width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.left-side {
+  flex: 1;
+  position: relative;
+  margin-top: 50px;
+}
+
+.bar-img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: yellow;
+  color: black;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  z-index: 1;
+}
+
+.right-side {
+  flex: 1;
+  padding: 60px 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.right-side h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.4;
+  margin-top: 70px;
+}
+
+.right-side h1 span {
+  color: #fff;
+}
+
+.right-side p {
+  margin: 20px 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 90%;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.feature {
+  text-align: center;
+  animation: fadeInUp 1.5s ease;
+}
+
+.feature i {
+  font-size: 2.5rem;
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px yellow;
+  }
+  50% {
+    box-shadow: 0 0 25px yellow;
+  }
+  100% {
+    box-shadow: 0 0 10px yellow;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    flex: none;
+    width: 100%;
+  }
+
+  .bar-img {
+    height: 400px;
+  }
+
+  .right-side h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .right-side p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .feature i {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .right-side h1 {
+    font-size: 3.5rem;
+  }
+
+  .right-side p {
+    font-size: 1.3rem;
+  }
+
+  .feature i {
+    font-size: 3.5rem;
+  }
+
+  .play-button {
+    font-size: 4rem;
+    padding: 30px;
+  }
+}
