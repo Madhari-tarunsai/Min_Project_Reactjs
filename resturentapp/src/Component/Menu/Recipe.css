@@ -1,0 +1,139 @@
+#allRecipesHolder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Card Animation */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Card Styling */
+.recipe-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  #allRecipesHolder {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  #allRecipesHolder {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  #allRecipesHolder {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  #allRecipesHolder {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1921px) {
+  #allRecipesHolder {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+#singleitemdetail {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    background-color: burlywood;
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin-top: 65px;
+}
+
+#singleitemdetail>#img> img {
+    height: 450px;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#img img:hover {
+    transform: scale(1.03);
+}
+
+#singleitemdetail h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #3e2723;
+}
+
+#singleitemdetail p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 5px 0;
+    color: #4e342e;
+}
+
+#singleitemdetail > div:last-child {
+    max-width: 600px;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+    #singleitemdetail {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #img img {
+        height: 300px;
+    }
+
+    #singleitemdetail h1 {
+        font-size: 24px;
+    }
+
+    #singleitemdetail p {
+        font-size: 16px;
+    }
+}
+#btn {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#btn > button {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+
